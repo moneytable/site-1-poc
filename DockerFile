@@ -1,0 +1,7 @@
+FROM richarvey/nginx-php-fpm:1.4.0
+
+ADD DockerConf/conf/nginx-site.conf /etc/nginx/sites-available/default.conf
+ADD DockerConf/conf/nginx-site-ssl.conf /etc/nginx/sites-available/default-ssl.conf
+
+ADD . /var/www/html/
+ADD DockerConf/errors/ /var/www/errors

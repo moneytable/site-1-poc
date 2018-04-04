@@ -81,10 +81,14 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Call Site 333</a>
-                </div>
+                <form action="{{ url('/upload') }}" method="post" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                    <div class="links">
+                        <input type="file" name="file" id="file">
+                    </div>
+                    <input type="submit" value="upload">
+                </form>
+                
             </div>
         </div>
     </body>
